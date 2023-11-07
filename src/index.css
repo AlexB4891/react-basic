@@ -1,25 +1,84 @@
-/* vamos a dar formato al botton de input en App.js*/
-/* Path: src/App.js */
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+body {
+  background-image: url("https://media.istockphoto.com/id/1035676256/es/foto/fondo-de-galaxia-y-estrellas.jpg?s=612x612&w=0&k=20&c=CCOStm5MJtOBnAkAcYr_qH1iqi4Zae8ScvNHDEnSDVs=");
+  background-size: cover;
+  background-repeat: repeat;
+  margin: 0;
+  padding: 0;
 }
 
-/* Ahora vamos a cambiar el tipo de letra del titulo de la pagina */	
-/* Path: src/App.css */
-.App {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
+.app {
+  /* Estilos para el contenedor principal quiero que en el fondo haya una imagen de una galaxia */
+  margin: 0 2cm; 
 }
 
 .title {
-  font-size: 1.5em;
-  color: #000000;
-  font-family: Arial, Helvetica, sans-serif;
+  /* Estilos para el título de color blanco en negrita y con una fuente futurista */
+  color: white;
+  font-weight: bold;
+  font-family: 'Roboto';
+}
+
+.title_2 {
+  /* Estilos para el título de color blanco en negrita y con una fuente futurista */
+  color: white;
+  font-weight: bold;
+  font-family: 'Roboto';
+}
+
+.error-message {
+  /* Estilos para el título de color blanco en negrita y con una fuente futurista */
+  color: white;
+  font-family: 'Roboto';
+}
+
+.description {
+  /* Estilos para la descripción texto de color blanco y texto robotico*/
+  color: white;
+  font-family: 'Roboto';
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.submit-button {
+  flex-shrink: 0;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Altura fija para el contenedor de la imagen */
+  border-radius: 10px; /* Esquinas curvas */
+  overflow: hidden; /* Para asegurar que la imagen no sobresalga del contenedor */
+  margin-bottom: 20px;
+}
+
+.image {
+  height: 100%; /* Altura fija para la imagen */
+  width: auto; /* El ancho se ajusta al aspect ratio original de la imagen */
+}
+
+.json-container {
+  color: white;
+  background-color: rgba(0, 127, 255, 0.6); /* Azure con 60% de opacidad */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.text-container {
+  color: white;
+  background-color: rgba(166, 196, 226, 0.6); /* Azure con 60% de opacidad */
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Roboto';
 }
