@@ -28,6 +28,7 @@ function App() {
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <input type="text" placeholder="Escribe tu URL o prompt aquí" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} />
         {imageUrl && <img src={imageUrl} alt="Imagen analizada" style={{ height: '200px', width: 'auto' }} />}
+        {loading && <p>Cargando...</p>}
         {imageDescription && <pre>{imageDescription}</pre>}
       </div>
       <button onClick={handleButtonClick}>Enviar</button>
