@@ -10,8 +10,8 @@ function App() {
     setLoading(true);
     analyzeImage(imageUrl).then((result) => {
       setLoading(false);
-      if (result) {
-        setImageDescription(JSON.stringify(result, null, 2));
+      if (result && result.description && result.description.captions && result.description.captions.length > 0) {
+        setImageDescription(result.description.captions[0].text);
       } else {
         setImageDescription('No se pudo obtener una descripción de la imagen.');
       }
@@ -29,7 +29,7 @@ function App() {
         <input type="text" placeholder="Escribe tu URL o prompt aquí" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} />
         {imageUrl && <img src={imageUrl} alt="Imagen analizada" style={{ height: '200px', width: 'auto' }} />}
         {loading && <p>Cargando...</p>}
-        {imageDescription && <pre>{imageDescription}</pre>}
+        {imageDescription && <p>{imageDescription}</p>}
         {!loading && !imageDescription && <p>No se pudo obtener una descripción de la imagen.</p>}
       </div>
       <button onClick={handleButtonClick}>Enviar</button>
