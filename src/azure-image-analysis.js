@@ -3,7 +3,7 @@ const { ComputerVisionClient } = require('@azure/cognitiveservices-computervisio
 const { CognitiveServicesCredentials } = require('@azure/ms-rest-azure-js');
 
 // Configura las credenciales
-const subscriptionKey = '';
+const subscriptionKey = REACT_APP_SUBSCRIPTION_KEY;
 const endpoint = 'https://compu-visi-msl.cognitiveservices.azure.com/';
 
 // Crea un cliente de Computer Vision

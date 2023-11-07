@@ -1,0 +1,23 @@
+
+{
+  "name": "Node.js",
+  "image": "node:14",
+  "extensions": [
+    "ms-azuretools.vscode-azurestaticwebapps",
+    "github.copilot"
+  ],
+  "settings": {
+    "azureFunctions.deploySubpath": ".",
+    "azureFunctions.preDeployTask": "npm install && npm run build",
+    "azureStaticWebApps.apiLocation": "api",
+    "azureStaticWebApps.appArtifactLocation": "build",
+    "azureStaticWebApps.outputLocation": "build",
+    "azureStaticWebApps.deploymentTokenSource": "StaticWebAppsAPI",
+    "files.autoSave": "onFocusChange",
+    "files.autoSaveDelay": 1000
+  },
+  "appPort": [3000],
+  "postCreateCommand": "npm install",
+  "forwardPorts": [3000],
+  "remoteUser": "node"
+}
